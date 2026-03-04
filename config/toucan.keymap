@@ -1,23 +1,14 @@
 #define CONFIG_WIRELESS
 
 // 6th layer
-#define GAME 6
-#define SCROLL 7
+#define SCROLL 6
 
 // Define to indicate we have a physical mouse/touchpad
 #define HAS_MOUSE
 
-#define ZMK_BASE_LAYER(name, LT, RT, LM, RM, LB, RB, LH, RH)     \
-    ZMK_42_LAYER(name, LT, RT, LM, RM, LB, RB, LH, RH, \
-        ___, ___, ___,                          \
-        ___, ___, &to GAME,                     \
-        &to DEF, &lt SCROLL MCLK                            \
-    )
-
-#include "zmk_42_layer.h"
 #include "zmk-helpers/key-labels/42.h"
 #include "base.keymap"
-#include "game_layer.h"
+#include "scroll_layer.h"
 #include "zmk_studio.h"
 
 / {
